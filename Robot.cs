@@ -30,7 +30,7 @@ namespace RobotGame
    
         }
 
-        public void Move()
+        public void Move(Board board)
         {
             int newRow = Position.Row;
             int newColumn = Position.Column;
@@ -38,18 +38,32 @@ namespace RobotGame
             switch (Facing)
             {
                 case Direction.NORTH:
-                    newRow++;
+                    var wall = board.WallList.FirstOrDefault(o => o.Row == newRow++);
+
+                    if(wall == null)
+                        newRow++;
                     break;
                 case Direction.SOUTH:
-                    newRow--;
+                    var wall_south = board.WallList.FirstOrDefault(o => o.Row == newRow--);
+
+                    if (wall_south == null)
+                        newRow--;
                     break;
                 case Direction.EAST:
-                    newColumn++;
+                    var wall_east = board.WallList.FirstOrDefault(o => o.Row == newColumn++);
+
+                    if (wall_east == null)
+                        newColumn++;
                     break;
                 case Direction.WEST:
-                    newColumn--;
+                    var wall_west = board.WallList.FirstOrDefault(o => o.Row == newColumn--);
+
+                    if (wall_west == null)
+                        newColumn--;
                     break;
             }
+            Position.Row = newRow;
+            Position.Column = newColumn;
         }
 
         public void TurnLeft()

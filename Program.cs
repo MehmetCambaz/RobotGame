@@ -18,7 +18,7 @@ namespace RobotGame
                 string[] q;
                 int row = 0, col = 0;
 
-                if (read.Length > 1)
+                if (command == "PLACE_ROBOT" & read.Length > 1)
                 {
                     specs = read[1].ToString();
                     q = specs.Split(',');
@@ -26,11 +26,18 @@ namespace RobotGame
                     col = Int32.Parse(q[1]);
                     facing = q[2].ToString();
                 }
+                if (command == "PLACE_WALL" & read.Length > 1)
+                {
+                    specs = read[1].ToString();
+                    q = specs.Split(',');
+                    row = Int32.Parse(q[0]);
+                    col = Int32.Parse(q[1]);
+                }
 
                 switch (command)
                 {
                     case "PLACE_ROBOT":
-                        if(board.isCoordinateValid(col, row) & facing != null)
+                        if (board.isCoordinateValid(row, col) & facing != null)
                         {
                             position = new Position(row, col);
 
@@ -43,6 +50,12 @@ namespace RobotGame
                         break;
                     case "REPORT":
                         robot.Report();
+                        break;
+                    case "PLACE_WALL":
+                        board.PlaceWall(row, col);
+                        break;
+                    case "MOVE":
+                        robot.Move(board);
                         break;
 
                 }
