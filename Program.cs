@@ -8,12 +8,12 @@ namespace RobotGame
         {
             Board board = new Board(5, 5);
             Position position;
-            Robot robot = new Robot(); ;
+            Robot robot = new Robot();
 
             while (true)
             {
                 string[] read = Console.ReadLine().Split(' ');
-                string command = read[0].ToString();
+                string command = read[0].ToString().ToUpper();
                 string specs, facing = "";
                 string[] q;
                 int row = 0, col = 0;
@@ -56,6 +56,12 @@ namespace RobotGame
                         break;
                     case "MOVE":
                         robot.Move(board);
+                        break;
+                    case "LEFT":
+                        robot.TurnLeft();
+                        break;
+                    case "RIGHT":
+                        robot.TurnRight();
                         break;
 
                 }

@@ -22,10 +22,11 @@ namespace RobotGame
 
         }
 
-        public bool isCoordinateValid(int x, int y)
+        public bool isCoordinateValid(int row, int col)
         {
-            if (x < rows & x > 1)
-                if (y < cols & y > 1)
+            // checks whether the coordinates are withing the board
+            if (row <= rows & row >= 1)
+                if (col <= cols & col >= 1)
                     return true;
             return false;
         }
