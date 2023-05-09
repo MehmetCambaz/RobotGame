@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotGame
 {
-    class Board
+    public class Board
     {
         private int rows;
         private int cols;

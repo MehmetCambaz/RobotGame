@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotGame
 {
-    class Robot
+    public class Robot
     {
         public enum Direction
         {
@@ -25,6 +25,7 @@ namespace RobotGame
             this.Facing = facing;
         }
 
+
         public Robot()
         {
    
@@ -39,7 +40,7 @@ namespace RobotGame
             switch (Facing)
             {
                 case Direction.NORTH:
-                    var wall = board.WallList.FirstOrDefault(o => o.Row == newRow + 1);
+                    var wall = board.WallList.FirstOrDefault(o => o.Row == newRow + 1 & o.Column == newColumn);
 
                     if(wall == null & board.isCoordinateValid(newRow + 1, newColumn))
                     {
@@ -47,19 +48,19 @@ namespace RobotGame
                     }
                     break;
                 case Direction.SOUTH:
-                    var wall_south = board.WallList.FirstOrDefault(o => o.Row == newRow - 1);
+                    var wall_south = board.WallList.FirstOrDefault(o => o.Row == newRow - 1 & o.Column == newColumn);
 
                     if (wall_south == null & board.isCoordinateValid(newRow - 1, newColumn))
                         newRow--;
                     break;
                 case Direction.EAST:
-                    var wall_east = board.WallList.FirstOrDefault(o => o.Row == newColumn + 1);
+                    var wall_east = board.WallList.FirstOrDefault(o => o.Row == newRow & o.Column == newColumn + 1);
 
                     if (wall_east == null & board.isCoordinateValid(newRow, newColumn + 1))
                         newColumn++;
                     break;
                 case Direction.WEST:
-                    var wall_west = board.WallList.FirstOrDefault(o => o.Row == newColumn - 1);
+                    var wall_west = board.WallList.FirstOrDefault(o => o.Row == newRow & o.Column == newColumn - 1);
 
                     if (wall_west == null & board.isCoordinateValid(newRow, newColumn - 1))
                         newColumn--;

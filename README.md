@@ -1,2 +1,41 @@
 # RobotGame
  A simple toy robot game simulation
+ 
+ X-AXIS => ROW
+ Y-AXIS => COLUMN
+
+
+# Test Data
+
+PLACE_ROBOT 1,1,NORTH
+PLACE_WALL 3,1
+MOVE
+MOVE
+MOVE
+MOVE
+RIGHT
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+# the app should print: 3,3,NORTH
+
+PLACE_ROBOT 3,1,EAST
+PLACE_WALL 4,3
+PLACE_WALL 3,3
+PLACE_WALL 2,3
+MOVE
+MOVE
+MOVE
+LEFT
+MOVE
+MOVE
+RIGHT
+MOVE
+MOVE
+RIGHT
+MOVE
+MOVE
+REPORT
+# the app should print: 3,4,SOUTH

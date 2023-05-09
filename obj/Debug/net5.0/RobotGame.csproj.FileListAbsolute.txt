@@ -5,7 +5,6 @@ C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\bin\Debug\net5.0\RobotG
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\bin\Debug\net5.0\RobotGame.dll
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\bin\Debug\net5.0\ref\RobotGame.dll
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\bin\Debug\net5.0\RobotGame.pdb
-C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.csproj.AssemblyReference.cache
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.AssemblyInfoInputs.cache
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.AssemblyInfo.cs
@@ -14,3 +13,4 @@ C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotG
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\ref\RobotGame.dll
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.pdb
 C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.genruntimeconfig.cache
+C:\Users\Cambaz-Monster\source\repos\RobotGame\RobotGame\obj\Debug\net5.0\RobotGame.csproj.AssemblyReference.cache

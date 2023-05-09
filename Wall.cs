@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotGame
 {
-    class Wall
+    public class Wall
     {
         public int Row { get; set; }
         public int Column { get; set; }
